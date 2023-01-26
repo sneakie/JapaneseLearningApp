@@ -27,6 +27,6 @@ def run_test(Questions):
     if answer == apa[1]:
         print("Rätt")
     else:
-        print("Fel")
+        print("Hello world")
 
 run_test(Question)
