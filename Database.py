@@ -24,8 +24,10 @@ def run_test(Questions):
             "How do you say " + apa[0].lower() + " in Japanese?"
         ]
         answer = input(question_prompts)
-        if answer == apa[1].lower():
+        if answer.lower() == apa[1].lower():
             total_question += 1
             print("Rätt")
+        else:
+            print("Fel")
 
 run_test(Question)
