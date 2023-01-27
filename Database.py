@@ -9,24 +9,23 @@ Word = [
 
     ["Train Station", "Eki"],
     ["Hello(day)", "Konnichiwa"],
-    ["Hello(Morning)", "Ohayo"]
+    ["Hello(Morning)", "Ohayo"],
+    ["Meat", "Niku"],
+    ["English", "Igirisu"]
 
 ]
 
-apa = Word[random.randint(0, 2)]
-
-question_prompts = [
-
-    "How do you say " + apa[0] + " in Japanese?"
-]
 
 def run_test(Questions):
-
-    score = 0
-    answer = input(question_prompts)
-    if answer == apa[1]:
-        print("Rätt")
-    else:
-        print("Hello world")
+    total_question = 0
+    for i in Word:
+        apa = Word[random.randint(0, 4)]
+        question_prompts = [
+            "How do you say " + apa[0].lower() + " in Japanese?"
+        ]
+        answer = input(question_prompts)
+        if answer == apa[1].lower():
+            total_question += 1
+            print("Rätt")
 
 run_test(Question)
