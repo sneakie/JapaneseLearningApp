@@ -1,16 +1,12 @@
 import random
 from Database import Word
-
 class Question:
     def __init__(self, prompt, answer):
         self.prompt = prompt
         self.answer = answer
-
-
-def run_test(Questions):
+def run_test(question):
     total_question = 0
     right_question = 0
-    wrong_question = 0
     asked_question = [
 
     ]
@@ -21,8 +17,7 @@ def run_test(Questions):
             continue
         else:
             question_prompts = [
-            "How do you say " + apa[0].lower() + " in Japanese?"
-        ]
+                "How do you say " + apa[0].lower() + " in Japanese?"]
             answer = input(question_prompts)
             asked_question.append(apa)
             if answer.lower() == apa[1].lower():
@@ -34,5 +29,4 @@ def run_test(Questions):
                 total_question += 1
     print("You had " + str(right_question) + " out of " + str(total_question) + " questions correct")
     print(asked_question)
-
 run_test(Question)
